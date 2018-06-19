@@ -39,7 +39,7 @@ def runCommand(quadIP):
     richrule = "rule family='ipv4' source address='" + quadIP + "' reject"
     fwcmd =  '--add-rich-rule="' +  richrule  + '"'   
     subprocess.check_output(["echo", "Hello World!"])
-    print( "here are the args firewall-cmd" + " --permanent --zone=FedoraWorkstation ", fwcmd])
+    print( "here are the args firewall-cmd" + " --permanent --zone=FedoraWorkstation " + fwcmd)
     try:
         #subprocess.check_output(["firewall-cmd", "--permanent --zone=FedoraWorkstation", fwcmd])
     except subprocess.CalledProcessError:
